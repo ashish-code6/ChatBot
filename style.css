@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  width: 400px;
+  height: 80vh;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-top: 50px;
+  /* background-image: url(/assets/image1.png); */
+  background-color: rgba(0, 0, 0, -2);
+  /* border: 2px solid red; */
+}
+.container nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(83, 83, 181);
+  border-radius: 8px 8px 0px 0px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+}
+.logo span {
+  align-self: self-end;
+  margin-bottom: 10px;
+  color: rgb(236, 204, 162);
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 40px;
+  margin-left: 60px;
+
+ 
+}
+.container nav img {
+  width: 80px;
+  animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0),
+  }
+  25% {
+    transform: translateY(-20px),
+  }
+  50% {
+    transform: translateY(0),   
+
+  }
+  75% {
+    transform: translateY(-10px),
+  }
+  100% {
+    transform: translateY(0),
+
+  }
+}
+
+.container section{
+    width: 100%;
+    height: 77%;
+    /* border: 1px solid black; */
+    padding: 0px 20px;
+}
+.container section .loading{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.container section .loading .load{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container section .loading .load h6{
+    width: 8px;
+    height: 8px;
+    background-color: blue;
+    border-radius: 50%;
+    margin: 3px 5px;
+    animation: load 1s linear infinite;
+
+}
+.container section .loading .load h6:nth-child(2){
+    animation-delay: 0.33s
+}
+.container section .loading .load h6:nth-child(3){
+    animation-delay: 0.66s
+}
+@keyframes load{
+    0%{ transform: translateY(0px)};
+    50%{ transform: translateY(5px)};
+    100%{transform: translateY(0px)};
+}
+#chatting{
+    width: 100%;
+    height: 92%;
+    /* border: 1px solid black; */
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+}
+#chatting::-webkit-scrollbar{
+    display: none;
+}
+#chatting span{
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 10px;
+
+}
+#chatting .bot-quest, .bot-ans{
+    width: 90%;
+    /* height: auto; */
+    position: relative;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+
+}
+#chatting .bot-ans{
+    justify-content: flex-start;
+}
+
+#chatting p{
+    width: 80%;
+    /* border: 1px solid black; */
+    white-space: pre-wrap;
+    padding: 10px 20px;
+    font-weight: 600;
+    word-break:break-all ;
+    box-shadow: 5px 5px 10px rgb(0,0,0,0.3),
+    inset 5px 5px 10px rgb(0,0,0,0.3);
+    /* border-radius: 0px 20px 0px 20px; */
+    /* margin: 2px; */
+    border-radius: 8px;
+}
+#chatting .bot-ans p{
+    padding-bottom: 30px;
+}
+#chatting .bot-ans i{
+    position: absolute;
+    left: 72%;
+    bottom: 10px;
+    cursor: grabbing;
+}
+footer{
+    width: 100%;
+    height: 13%;
+    background-color: rgb(83, 83, 181);
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search{
+    padding: 8px 10px;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(0,0,0,0.3),
+    inset 5px 5px 10px rgb(0,0,0,0.3);
+}
+.search input{
+    outline: none;
+    padding: 8px;
+    width: 250px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+   
+}
+
+button{
+  padding: 5px;
+  cursor: pointer;
+}
+
+/*  */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Styles for tablets here */
+  .container {
+    width: 70%;
+  }
+  
+  #chatting p {
+    font-size: 16px; /* Adjust font size for readability */
+  }
+}
